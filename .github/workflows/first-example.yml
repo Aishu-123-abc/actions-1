@@ -6,11 +6,17 @@ jobs:
         steps:
         - name: checkout
           uses: actions/checkout@v5
-        - name: Welcome Message
-          run: echo "My first github account job"
+        - name: Multiline script execution
+          run: |
+            echo "My first github account job"
+            ls -lart
+            cat README.md
+        
+        - name: Generate ASCII key art
+          run: cowsay -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
 
-        - name: List Files
-          run: ls
-
-        - name: Read Files
-          run: cat README.md
+#        - name: List Files
+#          run: ls
+#
+#        - name: Read Files
+#          run: cat README.md
