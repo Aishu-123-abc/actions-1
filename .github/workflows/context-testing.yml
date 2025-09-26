@@ -1,0 +1,22 @@
+name: context testing
+on: push
+
+jobs:
+    dump-context-to-logs:
+        runs-on: unbuntu-latest
+        steps:
+        - name: Dump githun context
+          env:
+            GITHUB-CONTEXT: ${{ toJson(github) }}
+          run: echo "$GITHUB-CONTEXT"
+        
+        - name: Dump runner context
+          env: 
+            RUNNER-CONTEXT: ${{ toJson(runner) }}
+          run: echo "$RUNNER-CONTEXT"
+          
+        - name: Dump jobs context
+          env: 
+            JOB-CONTEXT: ${{ toJson(job) }}
+          run: echo "$JOB-CONTEXT"
+
