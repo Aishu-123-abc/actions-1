@@ -6,13 +6,13 @@ jobs:
             fail-fast: false
             max-parallel: 3
             matrix:
-                os: [ ubuntu-latest, ubuntu-20.04, window-latest ]
+                os: [ ubuntu-latest, ubuntu-24.04, window-latest ]
                 images: [hello-world, alpine]
                 exclude:
                     - os: window-latest
                       images: alpine
                 include: 
-                    - os: unbuntu-20.04
+                    - os: unbuntu-24.04
                       images: amd64/alpine
         runs-on: ${{ matrix.os }}
         steps:
