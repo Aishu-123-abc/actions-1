@@ -1,6 +1,6 @@
 name: workflow filter and activities
 on:
-    push:
+    push:     #events added
         branches:
             - main
             - '!feature/*'
