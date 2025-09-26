@@ -3,7 +3,7 @@ on: push
 
 jobs:
     dump-context-to-logs:
-        runs-on: unbuntu-latest
+        runs-on: ubuntu-latest
         steps:
         - name: Dump githun context
           env:
