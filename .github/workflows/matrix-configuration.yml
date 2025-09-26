@@ -6,10 +6,10 @@ jobs:
             fail-fast: false
             max-parallel: 3
             matrix:
-                os: [ ubuntu-latest, ubuntu-24.04, window-latest ]
+                os: [ ubuntu-latest, ubuntu-24.04, windows-latest ]
                 images: [hello-world, alpine]
                 exclude:
-                    - os: window-latest
+                    - os: windows-latest
                       images: alpine
                 include: 
                     - os: unbuntu-24.04
